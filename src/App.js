@@ -17,10 +17,13 @@ class App extends Component {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hi {this.state.name}
-        </p>
-        <button>Change Name</button>
+        <p>Hi {this.state.name}</p>
+        <button 
+          onClick={() => {
+            this.state.name = 'John'
+            console.log(this.state);
+          }}>Change Name
+        </button>
       </header>
     </div>
   );
