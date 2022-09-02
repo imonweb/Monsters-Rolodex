@@ -2,6 +2,7 @@ import { Component } from 'react';
 
 
 import CardList from './components/card-list/card-list.component';
+import SearchBox from './components/search-box/search-box';
 import './App.css';
 
 class App extends Component {
@@ -55,7 +56,11 @@ class App extends Component {
           );
         })
       } */}
-
+      <SearchBox 
+        className='search-box'
+        onChangeHandler={onSearchChange} 
+        placehodler='search monsters'
+      />
       <CardList monsters={filteredMonsters} /> 
 
  
