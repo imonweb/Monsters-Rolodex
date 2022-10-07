@@ -30,18 +30,17 @@ const App = () => {
 
   const onSearchChange = (event) => {
     const searchFieldString = event.target.value.toLocaleLowerCase();
-    setTitle(searchFieldString);
+    setSearchField(searchFieldString);
   };
 
   const onTitleChange = (event) => {
     const searchFieldString = event.target.value.toLocaleLowerCase();
-    setSearchField(searchFieldString);
+    setTitle(searchFieldString);
   };
 
   return (
      <div className='App'>
-      
-      <h1 className='app-title'>Monsters Rolodex</h1>
+      <h1 className='app-title'>{title}</h1>
       
       <SearchBox 
         className='monsters-search-box'
@@ -52,9 +51,9 @@ const App = () => {
       <br />
 
       <SearchBox 
-        className='monsters-search-box'
+        className='title-search-box'
         onChangeHandler={onTitleChange} 
-        placehodler='search monsters'
+        placehodler='set title'
       />
     
       <CardList monsters={filteredMonsters} /> 
