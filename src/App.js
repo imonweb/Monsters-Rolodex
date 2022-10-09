@@ -35,7 +35,7 @@ const App = () => {
 
   const onTitleChange = (event) => {
     const searchFieldString = event.target.value.toLocaleLowerCase();
-    setTitle(searchFieldString);
+    // setTitle(searchFieldString);
   };
 
   return (
